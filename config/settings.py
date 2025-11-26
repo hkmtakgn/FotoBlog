@@ -28,9 +28,7 @@ ALLOWED_HOSTS = [
  "*",
 ]
 
-CSRF_TRUSTED_ORIGINS = [
-    "https://c1faad2b-14b2-4ade-b1f9-9d48fca0fad9-00-2oa9utb8scw2.worf.replit.dev",
-]
+
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
