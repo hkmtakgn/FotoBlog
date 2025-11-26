@@ -45,7 +45,11 @@ def page_views(request,
         page_number = request.GET.get("page")
         posts = set_posts.get_page(page_number)
         title = "Home"
-        page = Page.objects.filter (slug="home", is_active=True).first()
+        page = get_object_or_404(Page, slug="home", is_active=True)
+        if page is None:
+            page = None
+        else:
+            page = page
         context = dict(
             posts=posts,
             page=page,
